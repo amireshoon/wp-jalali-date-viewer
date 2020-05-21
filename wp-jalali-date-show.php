@@ -14,13 +14,15 @@
  * Author:            Amirhossein Meydani
  * Author URI:        https://amirhwsin.ir
  * License:           MIT
- * License URI:       
+ * License URI:       https://github.com/amireshoon/wp-jalali-date-viewer/blob/master/LICENSE
  * Text Domain:       wp_jds
- * Domain Path:       /languages
  */
 
 function wp_jalali_func( $atts ){
-    return jdate("j F Y H:i:s");
+
+    // Change format here
+    $format = 'j F Y H:i:s';
+    return jdate($format);
 }
 
 add_shortcode( 'wp_show_jalali', 'wp_jalali_func' );
